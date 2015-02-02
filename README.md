@@ -47,3 +47,7 @@ $ cabal build
 $ dist/build/Margolus/Margolus
 ```
 
+## "Live" in-browser project
+
+[There](https://www.fpcomplete.com/user/astynax/margolus) is a "live" version of project (powered by [FPComplete](https://www.fpcomplete.com) online IDE)
+
