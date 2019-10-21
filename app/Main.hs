@@ -43,19 +43,19 @@ main = do
 
 demos :: [(String, (Rules, RuleTable))]
 demos =
-  [ ("Bouncing ball",   (balls,                 ballsInBox))
-  , ("Sand (hg)",       (makeRules Sand.rules,  hourglass))
-  , ("Sand",            (makeRules Sand.rules,  drops))
-  , ("Crystallization", (makeRules Water.rules, drops))
-  , ("Gas Particles",   (bouncingGas,           threads))
+  [ ("\"Billiard Ball Machine\"", (bBM,                   bBBox))
+  , ("\"Sand\" (hg)",             (makeRules Sand.rules,  hourglass))
+  , ("\"Sand\"",                  (makeRules Sand.rules,  drops))
+  , ("Crystallization",           (makeRules Water.rules, drops))
+  , ("\"Bounce Gas\"",            (bounceGas,             threads))
   ]
 
-balls :: Rules
-balls =
+bBM :: Rules
+bBM =
   Simple.make2BitRules ' ' '*' [0,8,4,3,2,5,9,7,1,6,10,11,12,13,14,15]
 
-ballsInBox :: Field
-ballsInBox =
+bBBox :: Field
+bBBox =
   [ "**********************"
   , "*                    *"
   , "*                    *"
@@ -70,8 +70,8 @@ ballsInBox =
   ]
 
 
-bouncingGas :: Rules
-bouncingGas =
+bounceGas :: Rules
+bounceGas =
   Simple.make2BitRules ' ' '*' [0,1,2,12,4,10,9,7,8,6,5,11,3,13,14,15]
 
 threads :: Field
