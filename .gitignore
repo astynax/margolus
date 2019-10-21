@@ -1,2 +1,2 @@
-.hg*
-dist/*
+.stack-work/
+dist/
