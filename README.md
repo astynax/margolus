@@ -8,46 +8,39 @@ inspired by "[Margolus](https://en.wikipedia.org/wiki/Norman_Margolus) neighborh
 Example "screenshot" of the "sand" simulation:
 
 ```
-   $                                     
-   .      $                  $$      $$  
-                             .        .  
-   .      ..              # ...      ... 
+   $
+   .      $                  $$      $$
+                             .        .
+   .      ..              # ...      ...
          ...               #..        ..#
-   .    ......              #..      ..# 
-       #.....#               #        #  
-   .    ##### ..              #.    .#   
-             ...               #    #    
-   .        ...#.               .  .     
-           #...#                         
-   .        ### .               .  .     
-                                         
-   .            .               .  .     
-                                         
-   .            .               .  .     
-                                .  .     
-  ..            .             ........   
- ....                         ........   
-......          .           ............ 
- ......         .           ............ 
-........       ...          ............ 
+   .    ......              #..      ..#
+       #.....#               #        #
+   .    ##### ..              #.    .#
+             ...               #    #
+   .        ...#.               .  .
+           #...#
+   .        ### .               .  .
+
+   .            .               .  .
+
+   .            .               .  .
+                                .  .
+  ..            .             ........
+ ....                         ........
+......          .           ............
+ ......         .           ............
+........       ...          ............
  ........      ....        ..............
 ```
 
 ## Build
 
 ```shell
-$ cabal sandbox init
-$ cabal install --dependencies-only
-$ cabal build
+$ stack build
 ```
 
 ## Run
 
 ```shell
-$ dist/build/Margolus/Margolus
+$ stack exec margolus
 ```
-
-## "Live" in-browser project
-
-[There](https://www.fpcomplete.com/user/astynax/margolus) is a "live" version of project (powered by [FPComplete](https://www.fpcomplete.com) online IDE)
-
